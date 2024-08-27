@@ -1,0 +1,48 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Maicon",
+      "login": "souzafelipemaicon@gmail.com",
+      "senha": "1234"
+    },
+    {
+      "id": "2",
+      "nome": "Mellanie",
+      "login": "Mellanie@gmail.com",
+      "senha": "Brasil2024"
+    }
+  ],
+  "filmes": [
+    {
+      "id": "1",
+      "titulo": "Bastardos Gloriosos",
+      "ano": 2034,
+      "categoria": "jihihh"
+    },
+    {
+      "id": "2",
+      "titulo": "Vasco",
+      "ano": 1898,
+      "categoria": "Sofrimento"
+    },
+    {
+      "id": "3",
+      "titulo": "Pantera Cor de Rosa",
+      "ano": 0,
+      "categoria": "Comédia"
+    },
+    {
+      "id": "4",
+      "titulo": "sxasx",
+      "ano": 0,
+      "categoria": "cssdds"
+    },
+    {
+      "id": "5",
+      "titulo": "",
+      "ano": null,
+      "categoria": ""
+    }
+  ]
+}

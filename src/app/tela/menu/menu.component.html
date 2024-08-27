@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+  <button [routerLink]="['/menu']" class="mat-icon-button button">
+    <mat-icon>home</mat-icon>
+  </button>
+  <span class="toolbar-title">Central Cinema</span>
+</mat-toolbar>
+
+<button mat-button [matMenuTriggerFor]="cadastroMenu">
+  <span class="custom-button">Cadastro</span>
+</button>
+
+<mat-menu #cadastroMenu="matMenu" yPosition="below">
+  <!-- <button mat-menu-item [routerLink]="['/cadastro-usuario']">Usuário</button> -->
+  <button mat-menu-item [routerLink]="['/cadastro-filme']">Filme</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="listaMenu"><span class="custom-button">Lista</span></button>
+<mat-menu #listaMenu="matMenu" yPosition="below">
+  <button mat-menu-item [routerLink]="['/listagem-filmes']">Filmes</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="buscarMenu"><span class="custom-button">Buscar</span></button>
+<mat-menu #buscarMenu="matMenu" yPosition="below">
+  <button mat-menu-item [routerLink]="['/busca-filmes']">Filmes</button>
+</mat-menu>
+
+<router-outlet></router-outlet>
+
+<!--
+
+
+<div class="center-container">
+   Mostrar o botão apenas se showMenuButton for verdadeiro
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="['/listagem-filmes']">Listar Filmes</button>
+    <button mat-menu-item [routerLink]="['/cadastro-filme']">Cadastrar Filme</button>
+  </mat-menu>
+</div>
+
+<router-outlet></router-outlet>
+-->

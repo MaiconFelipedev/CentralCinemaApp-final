@@ -1,0 +1,23 @@
+.card-container {
+  position: relative;
+  height: 100vh;
+}
+
+.card-insercao-filme {
+  position: absolute;
+  top: 20px;  // Ajuste este valor conforme necessário
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 500px;
+  width: 100%;
+}
+
+.mat-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; // Espaço entre os campos (ajuste conforme necessário)
+
+  .mat-form-simples {
+    width: 100%; // Garante que os campos ocupem 100% da largura do container
+  }
+}

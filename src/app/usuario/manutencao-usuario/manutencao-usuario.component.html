@@ -1,0 +1,44 @@
+<!-- <button [routerLink]="['']" class="mat-icon-button button">
+  <mat-icon>arrow_back</mat-icon>
+</button>
+-->
+
+<mat-card class="card-insercao-usuario">
+  <mat-card-header>
+    <mat-card-title>Inserir Usuário</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+
+    <mat-form-field appearance="fill" class="mat-form-simples">
+      <mat-label>Id</mat-label>
+      <input matInput [(ngModel)]="usuario.id" placeholder="digite o id" [readonly]="true">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="mat-form-simples">
+      <mat-label>Nome</mat-label>
+      <input matInput [(ngModel)]="usuario.nome" placeholder="digite o nome">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="mat-form-simples">
+      <mat-label>Usuario</mat-label>
+      <input matInput [(ngModel)]="usuario.login" placeholder="digite o usuário">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="mat-form-simples">
+      <mat-label>Senha</mat-label>
+      <input matInput [(ngModel)]="usuario.senha" placeholder="digite a senha">
+    </mat-form-field>
+
+  </mat-card-content>
+  <mat-card-footer align="center">
+    <button mat-icon-button color="primary" (click)="inserirUsuario()">
+      @if(modoEdicao) {
+        <mat-icon>edit</mat-icon>
+      } @else {
+        <mat-icon>add</mat-icon>
+      }
+    </button>
+  </mat-card-footer>
+</mat-card>
+
+<router-outlet></router-outlet>

@@ -1,1 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@include mat.core();
+
+$custom-app-primary: mat.m2-define-palette(mat.$m2-light-blue-palette, 800);
+$custom-app-secondary: mat.m2-define-palette(mat.$m2-indigo-palette, A200, A400, 700);
+$custom-app-warn: mat.m2-define-palette(mat.$m2-blue-grey-palette);
+
+$custom-theme: mat.m2-define-light-theme((
+  color: (
+    primary: $custom-app-primary,
+    accent: $custom-app-secondary,
+    warn: $custom-app-secondary,
+  )
+));
+
+@include mat.all-component-themes($custom-theme);
+@include mat.core-theme($custom-theme);
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Nossa página cobre toda a view port
+html {
+  min-height: 100%;
+  background-image: url(https://img.freepik.com/vetores-gratis/particula-de-tecnologia-abstrata-realista-de-fundo_23-2148431735.jpg?w=996&t=st=1724360894~exp=1724361494~hmac=723b5eb86be204b4a98c811c09409336291298d591604f57b4bd68ba890dd4a4);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+.custom-button {
+
+  color: #FFFFFF; // Cor do texto
+  background-color: transparent; // Definindo o fundo transparente para que só o texto seja branco
+}
+
+/*
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.center-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+*/
+
+// Definindo variáveis de cor
+$button-bg-color: #fff; // Cor de fundo branca
+$button-text-color: #333; // Cor do texto
+$button-border-color: #ccc; // Cor da borda
+$button-hover-bg-color: #f0f0f0; // Cor de fundo ao passar o mouse
+$button-hover-text-color: $button-text-color; // Cor do texto ao passar o mouse
+
+// Mixin para estilizar botões
+@mixin button-styles($bg-color, $text-color, $border-color, $hover-bg-color, $hover-text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 1px solid $border-color;
+  padding: 10px;
+  border-radius: 50%; // Torna o botão redondo
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px; // Largura do botão
+  height: 48px; // Altura do botão
+
+  &:hover {
+    background-color: $hover-bg-color;
+    color: $hover-text-color;
+  }
+
+  .mat-icon {
+    font-size: 24px; // Ajuste o tamanho do ícone conforme necessário
+  }
+}
+
+// Estilizando o botão Angular Material
+.mat-icon-button.button {
+  @include button-styles($button-bg-color, $button-text-color, $button-border-color, $button-hover-bg-color, $button-hover-text-color);
+
+  // Remove o estilo padrão do Angular Material para o botão
+  .mat-button-wrapper {
+    padding: 0;
+  }
+}

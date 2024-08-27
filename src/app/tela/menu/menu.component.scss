@@ -1,0 +1,19 @@
+.custom-button {
+  text-color: #FFFFFF; // Cor do texto
+}
+// Defina variáveis para o espaçamento
+$button-margin: 8px;
+$title-margin: 8px;
+
+mat-toolbar {
+  display: flex;
+  align-items: center; // Alinha itens verticalmente ao centro
+
+  button {
+    margin-right: $button-margin; // Adiciona espaço à direita do botão
+  }
+
+  .toolbar-title {
+    margin-left: $title-margin; // Adiciona espaço à esquerda do texto
+  }
+}

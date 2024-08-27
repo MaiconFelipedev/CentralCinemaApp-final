@@ -1,0 +1,23 @@
+.card-container {
+  display: flex;
+  justify-content: center;  // Centraliza o card horizontalmente
+  align-items: flex-start;  // Alinha o card na parte superior
+  height: 100vh;            // Garante que o container ocupe a altura total da viewport
+  padding-top: 20px;        // Adiciona um espaço superior para afastar o card do topo
+
+  .card-insercao-filme {
+    width: 100%;
+    max-width: 500px;       // Define a largura máxima do card
+    margin: 0 auto;         // Centraliza o card horizontalmente
+  }
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; // Espaço entre os campos (ajuste conforme necessário)
+
+  .mat-form-simples {
+    width: 100%; // Garante que os campos ocupem 100% da largura do container
+  }
+}

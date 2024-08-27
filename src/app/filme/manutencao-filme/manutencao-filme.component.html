@@ -1,0 +1,42 @@
+<!--
+<button [routerLink]="['']" class="mat-icon-button button">
+  <mat-icon>arrow_back</mat-icon>
+</button>
+-->
+<div class="card-container">
+  <mat-card class="card-insercao-filme">
+    <mat-card-header>
+      <mat-card-title>Inserir Filme</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+      <mat-form-field appearance="fill" class="mat-form-simples">
+        <mat-label>Título</mat-label>
+        <input matInput [(ngModel)]="filme.titulo" placeholder="digite o título">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="mat-form-simples">
+        <mat-label>Ano</mat-label>
+        <input matInput [(ngModel)]="filme.ano" type="number" placeholder="digite o ano">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="mat-form-simples">
+        <mat-label>Categoria</mat-label>
+        <input matInput [(ngModel)]="filme.categoria" placeholder="digite a categoria">
+      </mat-form-field>
+
+    </mat-card-content>
+    <mat-card-footer align="center">
+      <button mat-icon-button color="primary" (click)="inserirFilme()">
+        <ng-container *ngIf="modoEdicao; else addIcon">
+          <mat-icon>edit</mat-icon>
+        </ng-container>
+        <ng-template #addIcon>
+          <mat-icon>add</mat-icon>
+        </ng-template>
+      </button>
+    </mat-card-footer>
+  </mat-card>
+</div>
+
+<router-outlet></router-outlet>

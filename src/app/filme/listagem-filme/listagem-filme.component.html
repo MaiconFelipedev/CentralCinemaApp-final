@@ -1,0 +1,53 @@
+<!--
+<button mat-icon-button [routerLink]="['']" class="mat-icon-button button">
+  <mat-icon>arrow_back</mat-icon>
+</button>
+-->
+
+<mat-card appearance="outlined">
+  <mat-card-content>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <mat-toolbar color="primary">
+        <span>Lista de Filmes</span>
+      </mat-toolbar>
+
+      <!-- Title Column -->
+      <ng-container matColumnDef="titulo">
+        <th mat-header-cell *matHeaderCellDef> Nome</th>
+        <td mat-cell *matCellDef="let filme"> {{ filme.titulo }}</td>
+      </ng-container>
+
+      <!-- Year Column -->
+      <ng-container matColumnDef="ano">
+        <th mat-header-cell *matHeaderCellDef> Ano</th>
+        <td mat-cell *matCellDef="let filme"> {{ filme.ano }}</td>
+      </ng-container>
+
+      <!-- Category Column -->
+      <ng-container matColumnDef="categoria">
+        <th mat-header-cell *matHeaderCellDef> Categoria</th>
+        <td mat-cell *matCellDef="let filme"> {{ filme.categoria }}</td>
+      </ng-container>
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Ações</th>
+        <td mat-cell *matCellDef="let filme">
+          <button mat-icon-button (click)="editar(filme)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="remover(filme)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <!-- Header and Row Definitions -->
+      <tr mat-header-row *matHeaderRowDef="['titulo', 'ano', 'categoria', 'actions']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['titulo', 'ano', 'categoria', 'actions'];"></tr>
+    </table>
+  </mat-card-content>
+</mat-card>
+
+<router-outlet></router-outlet>

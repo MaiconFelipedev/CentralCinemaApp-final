@@ -1,8 +1,12 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {TelaModule} from "./tela/tela.module";
+import {FilmeModule} from "./filme/filme.module";
+import {UsuarioModule} from "./usuario/usuario.module";
 
 @NgModule({
   declarations: [
@@ -10,9 +14,17 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TelaModule,
+    FilmeModule,
+    UsuarioModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  schemas:
+    [ CUSTOM_ELEMENTS_SCHEMA ]
+  ,
+  providers: [
+    provideAnimationsAsync()
+  ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

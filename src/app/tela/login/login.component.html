@@ -1,0 +1,48 @@
+<div class="conteudo-login">
+  <form class="conteudo-form" [formGroup]="loginForm" (submit)="submitLogin()">
+
+    <div class="logo">
+      <mat-icon>
+        person
+      </mat-icon>
+    </div>
+
+    <!-- Email -->
+    <div>
+      <div>
+        <input class="input-login" placeholder="email" formControlName="login" />
+      </div>
+      <div class="mensagem-erro" *ngIf="loginForm.get('login')?.errors?.['required'] && loginForm.get('login')?.touched">
+        Campo Obrigatório!
+      </div>
+      <div class="mensagem-erro" *ngIf="loginForm.get('login')?.errors?.['email'] && loginForm.get('login')?.touched">
+        Formato do Email não é válido
+      </div>
+    </div>
+
+    <!-- Senha -->
+    <div>
+      <div>
+        <input class="input-login" type="password" placeholder="senha" formControlName="senha" />
+      </div>
+      <div class="mensagem-erro" *ngIf="loginForm.get('senha')?.errors?.['required'] && loginForm.get('senha')?.touched">
+        Campo Obrigatório!
+      </div>
+    </div>
+
+    <!-- Submit para mandar para nosso ts -->
+    <div>
+      <button class="input-submit" [disabled]="!loginForm.valid">
+        Entrar
+      </button>
+      @if (this.resposta != ''){
+        <div class="mensagem-erro">
+          {{this.resposta}}
+        </div>
+      }
+
+
+    </div>
+
+  </form>
+</div>
