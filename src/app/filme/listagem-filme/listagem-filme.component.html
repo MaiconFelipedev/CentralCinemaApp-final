@@ -4,14 +4,14 @@
 </button>
 -->
 
-<mat-card appearance="outlined">
+<mat-card appearance="outlined" class="custom-card">
   <mat-card-content>
+
+    <mat-toolbar color="primary" class="toolbar-center">
+      <span>Lista de Filmes</span>
+    </mat-toolbar>
+
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-      <mat-toolbar color="primary">
-        <span>Lista de Filmes</span>
-      </mat-toolbar>
-
       <!-- Title Column -->
       <ng-container matColumnDef="titulo">
         <th mat-header-cell *matHeaderCellDef> Nome</th>

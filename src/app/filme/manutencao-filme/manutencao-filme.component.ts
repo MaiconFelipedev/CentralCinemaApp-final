@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {Filme} from "../../shared/model/filme";
 import {FilmeService} from "../../shared/services/filme.service";
@@ -48,7 +48,7 @@ export class ManutencaoFilmeComponent {
           resposta => {
             this.roteador.navigate(['listagem-filmes']);
             this.filme = new Filme('1', '', null, '');
-            this.notificacao.sucesso('Usuário cadastrado com sucesso.');
+            this.notificacao.sucesso('Filme cadastrado com sucesso.');
           }
         )
       }
@@ -62,7 +62,7 @@ export class ManutencaoFilmeComponent {
           resposta => {
             this.roteador.navigate(['listagem-filmes']);
             this.filme = new Filme('1', '', null, '');
-            this.notificacao.sucesso('Usuário editado com sucesso.');
+            this.notificacao.sucesso('Filme editado com sucesso.');
           }
         )
       }

@@ -8,13 +8,15 @@ import {RouterLink, RouterOutlet} from "@angular/router";
 import {MatIcon} from "@angular/material/icon";
 import { LoginComponent } from './login/login.component';
 import {ReactiveFormsModule} from "@angular/forms";
+import { PlataformaComponent } from './plataforma/plataforma.component';
 
 
 
 @NgModule({
     declarations: [
         MenuComponent,
-        LoginComponent
+        LoginComponent,
+        PlataformaComponent
     ],
   exports: [
     MenuComponent,

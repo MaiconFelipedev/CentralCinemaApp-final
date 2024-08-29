@@ -8,6 +8,11 @@ $title-margin: 8px;
 mat-toolbar {
   display: flex;
   align-items: center; // Alinha itens verticalmente ao centro
+  justify-content: space-between;
+
+  .spacer {
+    flex: 1 1 auto;
+  }
 
   button {
     margin-right: $button-margin; // Adiciona espaço à direita do botão
@@ -16,4 +21,9 @@ mat-toolbar {
   .toolbar-title {
     margin-left: $title-margin; // Adiciona espaço à esquerda do texto
   }
+}
+
+.menu {
+  display: flex;
+  align-items: end;
 }

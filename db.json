@@ -15,34 +15,16 @@
   ],
   "filmes": [
     {
-      "id": "1",
-      "titulo": "Bastardos Gloriosos",
-      "ano": 2034,
-      "categoria": "jihihh"
+      "id": "7",
+      "titulo": "Aventuras de Pi",
+      "ano": 2025,
+      "categoria": "Aventura"
     },
     {
-      "id": "2",
-      "titulo": "Vasco",
-      "ano": 1898,
-      "categoria": "Sofrimento"
-    },
-    {
-      "id": "3",
-      "titulo": "Pantera Cor de Rosa",
-      "ano": 0,
-      "categoria": "Comédia"
-    },
-    {
-      "id": "4",
-      "titulo": "sxasx",
-      "ano": 0,
-      "categoria": "cssdds"
-    },
-    {
-      "id": "5",
-      "titulo": "",
-      "ano": null,
-      "categoria": ""
+      "id": "8",
+      "titulo": "Vingadores",
+      "ano": 2024,
+      "categoria": "Ficção"
     }
   ]
 }

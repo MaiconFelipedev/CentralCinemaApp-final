@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
           const usuarioEncontrado = usuarios[0];
           if (usuarioEncontrado.senha === dadosLogin.senha) {
             //this.resposta = 'Login bem-sucedido!';
-            this.router.navigate(['menu']);
+            this.router.navigate(['plataforma']);
           } else {
             this.resposta = 'Senha incorreta.';
           }

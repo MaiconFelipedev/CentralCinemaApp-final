@@ -7,11 +7,12 @@ import {MenuComponent} from "./tela/menu/menu.component";
 import {ManutencaoUsuarioComponent} from "./usuario/manutencao-usuario/manutencao-usuario.component";
 import {BuscaFilmeComponent} from "./filme/busca-filme/busca-filme.component";
 import {LoginComponent} from "./tela/login/login.component";
+import {PlataformaComponent} from "./tela/plataforma/plataforma.component";
 
 const routes: Routes = [
   {
-    path: 'menu',
-    component: MenuComponent
+    path: 'plataforma',
+    component: PlataformaComponent
   },
   {
     path: 'cadastro-usuario',
