@@ -22,7 +22,6 @@ import {FormsModule} from "@angular/forms";
 import {provideAnimationsAsync} from "@angular/platform-browser/animations/async";
 import {AppComponent} from "../app.component";
 import {HttpClientModule} from "@angular/common/http";
-import { BuscaFilmeComponent } from './busca-filme/busca-filme.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {MatRadioModule} from '@angular/material/radio';
@@ -33,12 +32,10 @@ import {MatMenu} from "@angular/material/menu";
   declarations: [
     ManutencaoFilmeComponent,
     ListagemFilmeComponent,
-    BuscaFilmeComponent
   ],
   exports: [
     ListagemFilmeComponent,
     ManutencaoFilmeComponent,
-    BuscaFilmeComponent
   ],
   imports: [
     CommonModule,

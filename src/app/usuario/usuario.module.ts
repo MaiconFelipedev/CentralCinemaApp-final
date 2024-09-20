@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ManutencaoUsuarioComponent } from './manutencao-usuario/manutencao-usuario.component';
 import {MatCard, MatCardContent, MatCardFooter, MatCardHeader} from "@angular/material/card";
 import {MatFormField} from "@angular/material/form-field";
-import {FormsModule} from "@angular/forms";
+import {FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInput} from "@angular/material/input";
 import {MatIconButton} from "@angular/material/button";
 import {MatIcon} from "@angular/material/icon";

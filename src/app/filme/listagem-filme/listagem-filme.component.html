@@ -3,15 +3,18 @@
   <mat-icon>arrow_back</mat-icon>
 </button>
 -->
-
-<mat-card appearance="outlined" class="custom-card">
+<mat-form-field>
+  <mat-label>Filtro</mat-label>
+  <input matInput (keyup)="filtrar($event)">
+</mat-form-field>
+<mat-card appearance="outlined">
   <mat-card-content>
-
-    <mat-toolbar color="primary" class="toolbar-center">
-      <span>Lista de Filmes</span>
-    </mat-toolbar>
-
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <mat-toolbar color="primary">
+        <span>Lista de Filmes</span>
+      </mat-toolbar>
+
       <!-- Title Column -->
       <ng-container matColumnDef="titulo">
         <th mat-header-cell *matHeaderCellDef> Nome</th>

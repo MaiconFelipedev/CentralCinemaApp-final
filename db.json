@@ -4,27 +4,60 @@
       "id": "1",
       "nome": "Maicon",
       "login": "souzafelipemaicon@gmail.com",
-      "senha": "1234"
+      "senha": "1234",
+      "filmes": []
     },
     {
       "id": "2",
       "nome": "Mellanie",
       "login": "Mellanie@gmail.com",
-      "senha": "Brasil2024"
+      "senha": "Brasil2024",
+      "filmes": []
+    },
+    {
+      "id": "3",
+      "nome": "Manoel",
+      "login": "manoel",
+      "senha": "ssww",
+      "filmes": []
     }
   ],
   "filmes": [
     {
-      "id": "7",
-      "titulo": "Aventuras de Pi",
+      "id": "1",
+      "titulo": "Bastardos Gloriosos",
+      "ano": 2034,
+      "categoria": "aventura"
+    },
+    {
+      "id": "2",
+      "titulo": "Vasco",
+      "ano": 1898,
+      "categoria": "Sofrimento"
+    },
+    {
+      "id": "6",
+      "titulo": "Homem de Ferro",
       "ano": 2025,
-      "categoria": "Aventura"
+      "categoria": "Ação"
+    },
+    {
+      "id": "7",
+      "titulo": "Força G",
+      "ano": 2011,
+      "categoria": "Ação"
     },
     {
       "id": "8",
-      "titulo": "Vingadores",
+      "titulo": "Vingadores Ultimato",
       "ano": 2024,
-      "categoria": "Ficção"
+      "categoria": "Ação"
+    },
+    {
+      "id": "9",
+      "titulo": "Avengers",
+      "ano": 2020,
+      "categoria": "Ação"
     }
   ]
 }

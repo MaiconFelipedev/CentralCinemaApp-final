@@ -2,13 +2,13 @@ import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
 import {MatToolbar} from "@angular/material/toolbar";
-import {MatButton} from "@angular/material/button";
+import {MatButton, MatIconButton} from "@angular/material/button";
 import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {MatIcon} from "@angular/material/icon";
 import { LoginComponent } from './login/login.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import { PlataformaComponent } from './plataforma/plataforma.component';
+import { MainComponent } from './main/main.component';
 
 
 
@@ -16,7 +16,7 @@ import { PlataformaComponent } from './plataforma/plataforma.component';
     declarations: [
         MenuComponent,
         LoginComponent,
-        PlataformaComponent
+        MainComponent
     ],
   exports: [
     MenuComponent,
@@ -32,7 +32,8 @@ import { PlataformaComponent } from './plataforma/plataforma.component';
     RouterLink,
     RouterOutlet,
     MatIcon,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconButton
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

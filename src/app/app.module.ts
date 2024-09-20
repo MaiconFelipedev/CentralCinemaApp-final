@@ -7,6 +7,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {TelaModule} from "./tela/tela.module";
 import {FilmeModule} from "./filme/filme.module";
 import {UsuarioModule} from "./usuario/usuario.module";
+import {FirestoreModule} from "@angular/fire/firestore";
+import {AngularFireModule} from "@angular/fire/compat";
+import {firebaseConfig} from "../../firestore.config";
+import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
+
 
 @NgModule({
   declarations: [
@@ -17,7 +22,11 @@ import {UsuarioModule} from "./usuario/usuario.module";
     AppRoutingModule,
     TelaModule,
     FilmeModule,
-    UsuarioModule
+    UsuarioModule,
+    FirestoreModule,
+    // Inicialize o Firebase com a configuração correta do environment
+    AngularFireModule.initializeApp(firebaseConfig), // Certifique-se que o environment possui firebaseConfig
+    AngularFirestoreModule, // Importa o módulo Firestore para usar no projeto
   ],
   schemas:
     [ CUSTOM_ELEMENTS_SCHEMA ]

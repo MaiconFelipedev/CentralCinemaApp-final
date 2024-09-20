@@ -1,9 +1,9 @@
 <mat-toolbar color="primary">
-  <button [routerLink]="['plataforma']" class="mat-icon-button button menu">
+  <button  [routerLink]="['/main/', login]" class="mat-icon-button button">
     <mat-icon>home</mat-icon>
   </button>
   <span class="toolbar-title">Central Cinema</span>
-  <button [routerLink]="['']" class="mat-icon-button button">
+  <button [routerLink]="['']" mat-icon-button class="mat-icon-button button end">
     <mat-icon>logout</mat-icon>
   </button>
 </mat-toolbar>
@@ -14,17 +14,12 @@
 
 <mat-menu #cadastroMenu="matMenu" yPosition="below">
   <!-- <button mat-menu-item [routerLink]="['/cadastro-usuario']">Usuário</button> -->
-  <button mat-menu-item [routerLink]="['/cadastro-filme']">Filme</button>
+  <button mat-menu-item [routerLink]="['/main/',login,'cadastro-filme']">Filme</button>
 </mat-menu>
 
 <button mat-button [matMenuTriggerFor]="listaMenu"><span class="custom-button">Lista</span></button>
 <mat-menu #listaMenu="matMenu" yPosition="below">
-  <button mat-menu-item [routerLink]="['/listagem-filmes']">Filmes</button>
-</mat-menu>
-
-<button mat-button [matMenuTriggerFor]="buscarMenu" disabled><span class="custom-button">Buscar</span></button>
-<mat-menu #buscarMenu="matMenu" yPosition="below">
-  <button mat-menu-item [routerLink]="['/busca-filmes']">Filmes</button>
+  <button mat-menu-item [routerLink]="['/main/',login,'listagem-filmes']">Filmes</button>
 </mat-menu>
 
 <router-outlet></router-outlet>

@@ -15,7 +15,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
-              private usuarioService: UsuarioService) { }
+              private usuarioService: UsuarioService) {
+  }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -33,7 +34,7 @@ export class LoginComponent implements OnInit {
           const usuarioEncontrado = usuarios[0];
           if (usuarioEncontrado.senha === dadosLogin.senha) {
             //this.resposta = 'Login bem-sucedido!';
-            this.router.navigate(['plataforma']);
+            this.router.navigate(['/main', usuarioEncontrado.login]);
           } else {
             this.resposta = 'Senha incorreta.';
           }

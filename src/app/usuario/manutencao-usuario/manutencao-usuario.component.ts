@@ -3,6 +3,7 @@ import {Usuario} from "../../shared/model/usuario";
 import {ActivatedRoute, Router} from "@angular/router";
 import {UsuarioService} from "../../shared/services/usuario.service";
 import {NotificacaoService} from "../../shared/services/notificacao.service";
+import {UsuarioFirestoreService} from "../../shared/services/usuario-firestore.service";
 
 @Component({
   selector: 'app-manutencao-usuario',
@@ -10,7 +11,7 @@ import {NotificacaoService} from "../../shared/services/notificacao.service";
   styleUrl: './manutencao-usuario.component.scss'
 })
 export class ManutencaoUsuarioComponent {
-  usuario = new Usuario('1', '', '', '');
+  usuario = new Usuario('1');
   modoEdicao = false;
 
   constructor(private roteador: Router, private rotaAtual: ActivatedRoute,
@@ -46,8 +47,7 @@ export class ManutencaoUsuarioComponent {
       try {
         this.usuarioService.inserir(this.usuario).subscribe(
           resposta => {
-            this.roteador.navigate(['listagem-usuarios']);
-            this.usuario = new Usuario('1', '', '', '');
+            this.roteador.navigate(['/main/listagem-usuarios']);
             this.notificacao.sucesso('Usuário cadastrado com sucesso.');
           }
         )
@@ -60,8 +60,7 @@ export class ManutencaoUsuarioComponent {
       try {
         this.usuarioService.editar(this.usuario).subscribe(
           resposta => {
-            this.roteador.navigate(['listagem-usuarios']);
-            this.usuario = new Usuario('1', '', '', '');
+            this.roteador.navigate(['/main/listagem-usuarios']);
             this.notificacao.sucesso('Usuário editado com sucesso.');
           }
         )
