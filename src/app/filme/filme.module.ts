@@ -26,6 +26,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatRadioButton, MatRadioGroup} from "@angular/material/radio";
 import {MatRadioModule} from '@angular/material/radio';
 import {MatMenu} from "@angular/material/menu";
+import {PipesModule} from "../shared/pipes/pipes.module";
+import {MatSlideToggle} from "@angular/material/slide-toggle";
 
 
 @NgModule({
@@ -67,7 +69,9 @@ import {MatMenu} from "@angular/material/menu";
     MatRadioGroup,
     MatRadioButton,
     MatRadioModule,
-    MatMenu
+    MatMenu,
+    PipesModule,
+    MatSlideToggle
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

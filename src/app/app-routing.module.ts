@@ -18,6 +18,7 @@ const routes: Routes = [
       {path: 'cadastro-filme', component: ManutencaoFilmeComponent},
       {path: 'cadastro-filme/:id', component: ManutencaoFilmeComponent},
       {path: 'listagem-filmes', component: ListagemFilmeComponent},
+
       //{path: '', redirectTo: 'listagem-filmes', pathMatch: 'full'} // Redireciona para a listagem-filmes por padrão
     ]
   },

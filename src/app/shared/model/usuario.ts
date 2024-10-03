@@ -6,17 +6,17 @@ export class Usuario {
   public nome?: string;
   public login?: string;
   public senha?: string;
-  public filmes?: Filme[]
+  //public filmes?: Filme[]
 
 
   constructor(
-    id?: string,
+    //id?: string,
     usuario: Usuario = {}
   ){
-    this.id = id;
+    this.id = usuario.id;
     this.nome = usuario.nome;
     this.login = usuario.login;
     this.senha = usuario.senha;
-    this.filmes = usuario.filmes;
+    //this.filmes = usuario.filmes;
   }
 }

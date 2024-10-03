@@ -1,12 +1,13 @@
-<!--
-<button mat-icon-button [routerLink]="['']" class="mat-icon-button button">
-  <mat-icon>arrow_back</mat-icon>
-</button>
--->
+<p><mat-slide-toggle [(ngModel)]="mostrarMaisVelhos" (change)="alternarLista()">
+  {{ mostrarMaisVelhos ? 'Todos os Filmes' : 'Filmes Mais Velhos' }}
+</mat-slide-toggle></p>
+
+<!-- Campo de Filtragem -->
 <mat-form-field>
   <mat-label>Filtro</mat-label>
-  <input matInput (keyup)="filtrar($event)">
+  <input matInput placeholder="filtro por qualquer valor" (keyup)="filtrar($event)">
 </mat-form-field>
+
 <mat-card appearance="outlined">
   <mat-card-content>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -15,25 +16,19 @@
         <span>Lista de Filmes</span>
       </mat-toolbar>
 
-      <!-- Title Column -->
+      <!-- Colunas Criadas -->
       <ng-container matColumnDef="titulo">
         <th mat-header-cell *matHeaderCellDef> Nome</th>
-        <td mat-cell *matCellDef="let filme"> {{ filme.titulo }}</td>
+        <td mat-cell *matCellDef="let filme"> {{ filme.titulo | titlecase }}</td>
       </ng-container>
-
-      <!-- Year Column -->
       <ng-container matColumnDef="ano">
         <th mat-header-cell *matHeaderCellDef> Ano</th>
         <td mat-cell *matCellDef="let filme"> {{ filme.ano }}</td>
       </ng-container>
-
-      <!-- Category Column -->
       <ng-container matColumnDef="categoria">
         <th mat-header-cell *matHeaderCellDef> Categoria</th>
-        <td mat-cell *matCellDef="let filme"> {{ filme.categoria }}</td>
+        <td mat-cell *matCellDef="let filme"> {{ filme.categoria | titlecase }}</td>
       </ng-container>
-
-      <!-- Actions Column -->
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Ações</th>
         <td mat-cell *matCellDef="let filme">
@@ -46,9 +41,9 @@
         </td>
       </ng-container>
 
-      <!-- Header and Row Definitions -->
-      <tr mat-header-row *matHeaderRowDef="['titulo', 'ano', 'categoria', 'actions']"></tr>
-      <tr mat-row *matRowDef="let row; columns: ['titulo', 'ano', 'categoria', 'actions'];"></tr>
+      <!-- Definições de cabeçalho e linhas-->
+      <tr mat-header-row *matHeaderRowDef=mostrarColunas></tr>
+      <tr mat-row *matRowDef="let row; columns: mostrarColunas;"></tr>
     </table>
   </mat-card-content>
 </mat-card>

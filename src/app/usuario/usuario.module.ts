@@ -5,7 +5,7 @@ import {MatCard, MatCardContent, MatCardFooter, MatCardHeader} from "@angular/ma
 import {MatFormField} from "@angular/material/form-field";
 import {FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatInput} from "@angular/material/input";
-import {MatIconButton} from "@angular/material/button";
+import {MatButton, MatFabButton, MatIconButton, MatMiniFabButton} from "@angular/material/button";
 import {MatIcon} from "@angular/material/icon";
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {MatMenu} from "@angular/material/menu";
@@ -30,7 +30,10 @@ import {MatMenu} from "@angular/material/menu";
     MatIcon,
     RouterOutlet,
     RouterLink,
-    MatMenu
+    MatMenu,
+    MatButton,
+    MatMiniFabButton,
+    MatFabButton
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

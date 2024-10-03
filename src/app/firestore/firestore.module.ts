@@ -13,7 +13,7 @@ import {firebaseConfig} from "../../../firestore.config";
   imports: [
     CommonModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(firebaseConfig.firebase),
+    AngularFireModule.initializeApp(firebaseConfig),
   ]
 })
 export class FirestoreModule { }

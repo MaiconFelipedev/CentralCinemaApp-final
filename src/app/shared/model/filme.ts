@@ -7,12 +7,11 @@ export class Filme {
   constructor(
     id?: string,
     filme: Filme = {}
-  ){
+  )
+  {
     this.id = id;
     this.titulo = filme.titulo;
     this.ano = filme.ano;
     this.categoria = filme.categoria;
   }
-
-
 }

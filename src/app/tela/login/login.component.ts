@@ -7,7 +7,7 @@ import { Usuario } from "../../shared/model/usuario";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrls: ['./login.component.scss' ] // Corrigido de styleUrl para styleUrls
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
@@ -30,10 +30,10 @@ export class LoginComponent implements OnInit {
 
     this.usuarioService.buscarPorEmail(dadosLogin.login).subscribe({
       next: (usuarios: Usuario[]) => {
-        if (usuarios.length > 0) {
-          const usuarioEncontrado = usuarios[0];
+        // Filtra para encontrar o usuário pelo login (e-mail)
+        const usuarioEncontrado = usuarios.find(usuario => usuario.login === dadosLogin.login);
+        if (usuarioEncontrado) {
           if (usuarioEncontrado.senha === dadosLogin.senha) {
-            //this.resposta = 'Login bem-sucedido!';
             this.router.navigate(['/main', usuarioEncontrado.login]);
           } else {
             this.resposta = 'Senha incorreta.';

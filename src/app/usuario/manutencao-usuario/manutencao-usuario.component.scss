@@ -1,3 +1,9 @@
+.form-container {
+  display: flex;
+  flex-direction: column; // Alinha os elementos verticalmente
+  gap: 16px; // Espaçamento entre os campos (opcional)
+}
+
 .card-container {
   position: relative;
   height: 100vh;

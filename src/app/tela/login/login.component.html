@@ -35,18 +35,17 @@
       <button class="input-submit" [disabled]="!loginForm.valid">
         Entrar
       </button>
-      @if (this.resposta != ''){
-        <div class="mensagem-erro">
-          {{this.resposta}}
-        </div>
-      }
+      <div class="mensagem-erro" *ngIf="resposta !== ''">
+        {{ resposta }}
+      </div>
     </div>
 
-        <div>
-          <button class="input-cadastrar" [routerLink]="['cadastro-usuario']">
-            Cadastrar
-          </button>
-        </div>
+    <!-- Cadastrar dentro do formulário -->
+    <div>
+      <button type="button" class="input-cadastrar" [routerLink]="['/cadastro-usuario']">
+        Cadastrar
+      </button>
+    </div>
 
   </form>
 </div>

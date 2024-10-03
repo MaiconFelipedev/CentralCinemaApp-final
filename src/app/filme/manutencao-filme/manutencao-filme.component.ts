@@ -52,8 +52,8 @@ export class ManutencaoFilmeComponent implements OnInit{
       try {
         this.filmeService.inserir(this.filme).subscribe(
           resposta => {
-            this.roteador.navigate(['/main/listagem-filmes']);
-            this.notificacao.sucesso('Usuário cadastrado com sucesso.');
+            this.roteador.navigate([`/main/${this.login}/listagem-filmes`]);
+            this.notificacao.sucesso('Filme cadastrado com sucesso.');
             console.log(this.filme.id)
           }
         )
@@ -66,8 +66,8 @@ export class ManutencaoFilmeComponent implements OnInit{
       try {
         this.filmeService.editar(this.filme).subscribe(
           resposta => {
-            this.roteador.navigate(['/main/listagem-filmes']);
-            this.notificacao.sucesso('Usuário editado com sucesso.');
+            this.roteador.navigate([`/main/${this.login}/listagem-filmes`]);
+            this.notificacao.sucesso('Filme editado com sucesso.');
 
           }
         )
@@ -77,4 +77,5 @@ export class ManutencaoFilmeComponent implements OnInit{
       }
     }
   }
+
 }

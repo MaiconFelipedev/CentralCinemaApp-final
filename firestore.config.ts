@@ -1,7 +1,5 @@
-
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// O Módulo específico carregará a configuração do Firestore
+  // npm install @angular/fire firebase --save
 export const firebaseConfig = {
   apiKey: "AIzaSyAUqlreeswGIr0QEZhDvubQjtxv6sQurd4",
   authDomain: "cinema-app-pweb.firebaseapp.com",

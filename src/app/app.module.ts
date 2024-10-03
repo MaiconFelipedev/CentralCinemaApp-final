@@ -11,11 +11,12 @@ import {FirestoreModule} from "@angular/fire/firestore";
 import {AngularFireModule} from "@angular/fire/compat";
 import {firebaseConfig} from "../../firestore.config";
 import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
-
+import {AngularFireAuthModule} from "@angular/fire/compat/auth";
+import {AngularFireDatabaseModule} from "@angular/fire/compat/database";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,9 +25,10 @@ import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
     FilmeModule,
     UsuarioModule,
     FirestoreModule,
-    // Inicialize o Firebase com a configuração correta do environment
-    AngularFireModule.initializeApp(firebaseConfig), // Certifique-se que o environment possui firebaseConfig
-    AngularFirestoreModule, // Importa o módulo Firestore para usar no projeto
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
   ],
   schemas:
     [ CUSTOM_ELEMENTS_SCHEMA ]
